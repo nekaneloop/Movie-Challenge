@@ -1,10 +1,10 @@
-// import App from '../App'
+import "./Header.css"
 
 function Header() {
   return (
-    <div className='Logo'> 
+    <div className='header'> 
         <h1> motion </h1>
-        <img src='../src/img/m-m.svg'></img>
+        <img className="logo" src='../src/img/m-m.svg'></img>
     </div>
   )
 }

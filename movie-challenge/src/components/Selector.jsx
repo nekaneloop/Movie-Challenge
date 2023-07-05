@@ -5,17 +5,17 @@ function Selector() {
     <div>
       <select className="SelectCategory">
 
-      <option> Categoría </option>
-        <option> Películas </option>
-        <option> TV </option>
+      <option> category </option>
+        <option> movies </option>
+        <option> tv </option>
 
       </select>
 
       <select className="SelectGenre">
 
-        <option> Géneros </option>
-        <option> Drama </option>
-        <option> Terror </option>
+        <option> genres </option>
+        <option> drama </option>
+        <option> terror </option>
 
       </select>
     </div>

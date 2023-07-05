@@ -1,7 +1,7 @@
 import Header from './components/header';
 import Selector from './components/Selector';
 import Cards from './components/Cards';
-import Api from './components/Api';
+import First from './components/First';
 // import './App.css'
 
 function App() {
@@ -10,7 +10,8 @@ function App() {
         <Header />
         <Selector />
         <Cards  />
-        <Api />
+        <h3> más destacados </h3>
+        <First />
       </div>
       ) 
 }
