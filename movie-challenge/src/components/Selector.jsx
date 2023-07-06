@@ -1,26 +1,27 @@
-// import React from 'react'
+import { selectorGenre } from '../services/services-films';
+import { useEffect, useState } from "react";
 
 function Selector() {
+
+  const [options, SetOptions] = useState(null);
+
+  useEffect(() => {
+    selectorGenre()
+    .then((response) => {
+      SetOptions(response.data);
+    })
+  }, []);
+
   return (
-    <div>
-      <select className="SelectCategory">
-
-      <option> category </option>
-        <option> movies </option>
-        <option> tv </option>
-
-      </select>
-
-      <select className="SelectGenre">
-
-        <option> genres </option>
-        <option> drama </option>
-        <option> terror </option>
-
-      </select>
-    </div>
-    
-  )
-}
+    <div className='selection'>
+      {options ? (
+    options.results.map((option) => {
+      <div key={option.id}>
+      <select> {option.genre} </select>
+      </div>
+      })
+      ) : null }
+    </div>  
+)}
 
 export default Selector;

@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import "./First.css"
 import { getFilms } from "../services/services-films";
+import "./First.css";
 
 // componente principal 
-function Api() {
+function FirstData() {
 
   const poster = 'https://image.tmdb.org/t/p/original'
 
@@ -34,4 +34,4 @@ function Api() {
       ) 
 }
 
-    export default Api;
+    export default FirstData;

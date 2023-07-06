@@ -16,3 +16,10 @@ export const getFilms = () => {
 }
 
 // filtrado 
+
+const genreList = 'https://api.themoviedb.org/3';
+
+export const selectorGenre = () => {
+return axios.get(`${genreList}/genre/movie/list`, {
+ })
+}
