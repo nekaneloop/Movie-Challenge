@@ -1,27 +1,29 @@
-import { selectorGenre } from '../services/services-films';
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
+import { filmsList } from '../services/services-films';
 
-function Selector() {
-
-  const [options, SetOptions] = useState(null);
-
-  useEffect(() => {
-    selectorGenre()
-    .then((response) => {
-      SetOptions(response.data);
+const Selector = () => {
+    
+ const [lists, setLists] = useState([])
+ 
+ useEffect(() => {
+    filmsList()
+    .then((result) => {
+        setLists(result.data)
     })
-  }, []);
+    }, [])
 
-  return (
-    <div className='selection'>
-      {options ? (
-    options.results.map((option) => {
-      <div key={option.id}>
-      <select> {option.genre} </select>
-      </div>
-      })
-      ) : null }
-    </div>  
-)}
+
+    return (
+
+    <div key={lists.id}>
+        { lists ? (
+                <select key={lists.id}>
+                <option value="list" key={lists.name}>
+                </option>
+                </select>
+        ) : [] }
+    </div>
+    )
+}
 
 export default Selector;
