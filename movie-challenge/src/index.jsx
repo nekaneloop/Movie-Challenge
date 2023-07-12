@@ -1,29 +1,20 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-// import { useRef } from 'react';
-// import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './App.jsx'
 import './index.css'
+// import Header from './components/header.jsx'
+// import Selector from './components/Selector.jsx'
 
-//rutas - ciertos eventos
-/* const path = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />
-  },
-  {
-    path:  "Detail",
-    element: <div> Films details </div>,
-  },
-]); */ 
+
+
+// const route = createBrowserRouter(routes);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* <RouterProvider path={path} />  */}
     <App />
-  </React.StrictMode>,
+    {/* <RouterProvider route={route} />   */}
+  </React.StrictMode>
 );
-
 
 
 
