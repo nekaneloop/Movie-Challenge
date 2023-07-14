@@ -1,5 +1,4 @@
 import axios from "axios";
-
 // peticion 
 
 const api = 'https://api.tmdb.org/3';
@@ -15,7 +14,7 @@ export const getFilms = () => {
     })
 }
 
-// filtrado aplica json
+// lista de generos
 const genderList = 'https://api.themoviedb.org/3/genre/movie/list';
 
 export const filmsList = () => {
@@ -27,6 +26,40 @@ export const filmsList = () => {
     }
   })
 }
+
+// solicitar por id drama 18 
+
+const apiDrama = 'https://api.themoviedb.org/3';
+const key = '35d75f4c69aa907579c2efd87ad489db';
+
+export const dramaList = async () => {
+  try {
+    const response = await axios.get(`${apiDrama}/discover/movie`, {
+      params: {
+        api_key: key,
+        with_genres: '18',
+      },
+    });
+
+    return response.data.results;
+  } catch (error) {
+    console.log(error);
+    return [];
+  }
+};
+
+// petición de un solo objeto o película
+
+/* const bannerApi = 'https://api.tmdb.org/3';
+const bannerKey = '35d75f4c69aa907579c2efd87ad489db';
+
+export const banner = async (id) => {
+const data = await axios.get(`${bannerApi}/movie`, {
+  params: {
+    api_key: bannerKey,
+  }
+}) */ 
+
 
 
 

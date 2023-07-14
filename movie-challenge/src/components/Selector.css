@@ -1,0 +1,12 @@
+.Choose {
+    font-family: 'DM Sans';
+    font-weight: 500;
+    font-size: 14px;
+    text-transform: lowercase;
+}
+
+select {
+    border: 0.615px solid #333;
+    width: 121px;
+    height: 30px;
+}

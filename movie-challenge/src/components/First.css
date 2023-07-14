@@ -1,6 +1,20 @@
+.posterBanner {
+    width: 359px;
+    height: 354px;
+}
 
 .backdrop {
     width: 306px;
     height: 177px;
     border-radius: 15px;
+}
+
+.banner {
+    font-family: DM Sans;
+    font-size: 28px;
+}
+
+.tittle {
+    font-family: DM Sans;
+    font-size: 28px;
 }

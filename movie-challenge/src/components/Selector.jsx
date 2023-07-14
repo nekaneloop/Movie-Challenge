@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { filmsList } from '../services/services-films';
 import { useNavigate } from 'react-router'
+import './Selector.css'
 
 
 const Selector = () => {
@@ -32,7 +33,7 @@ useEffect(() => {
     return (
 
     <div>
-    <select onChange={(e) => handleClick(e)}>
+    <select onChange={(e) => handleClick(e)} className='Choose'>
         <option>genres</option>
         {lists.map((genre) => (
         <option key={genre.id} value={genre.id}>
