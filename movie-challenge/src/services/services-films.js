@@ -48,17 +48,7 @@ export const dramaList = async () => {
   }
 };
 
-// petición de un solo objeto o película
 
-/* const bannerApi = 'https://api.tmdb.org/3';
-const bannerKey = '35d75f4c69aa907579c2efd87ad489db';
-
-export const banner = async (id) => {
-const data = await axios.get(`${bannerApi}/movie`, {
-  params: {
-    api_key: bannerKey,
-  }
-}) */ 
 
 
 
