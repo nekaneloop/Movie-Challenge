@@ -1,0 +1,28 @@
+a.click-seeMore {
+    font-family: DM Sans;
+
+}
+
+h1#genreDrama {
+    color: #333333;
+    position: absolute;
+    top: -33px;
+    left: 24px;
+    margin-bottom: 10px;
+    font-size: 20px;
+
+}
+
+.click-seeMore {
+    font-family: DM Sans;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-left: 240px;
+    padding-top: 0;
+}
+
+#text {
+    text-transform: uppercase;
+    color: white;
+}

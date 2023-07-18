@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { dramaList } from '../services/services-films';
 import { Link } from 'react-router-dom';
 import { FaChevronRight } from 'react-icons/fa';
+import './DramaPage.css'
 
 function DramaPage() {
 
@@ -20,14 +21,17 @@ function DramaPage() {
     
     return (
         <div className="dataDrama">
+            <h1 id="genreDrama"> drama </h1>
             {drama.length > 0 ? (
         drama.map((dramaFilm) => (
         <div key={dramaFilm.id}>
-            {dramaFilm.original_title}
             <div>
             <img className="backdrop" src={`${poster + dramaFilm.backdrop_path}`} />
-            <Link to={`/movie/${dramaFilm.id}`} className="click-seeMore"> see more <FaChevronRight /> </Link>
+            <h2> {dramaFilm.original_title} </h2>
+            <Link to={`/movie/${dramaFilm.id}`} className="click-seeMore"> see more <FaChevronRight /> 
+            </Link>
             </div>
+
         </div>
         ))
     ) : null}

@@ -49,6 +49,22 @@ export const dramaList = async () => {
 };
 
 
+/* export const detailList = async (id) => {
+  try {
+    const result = axios.get(`${apiDetail}${id}`, {
+      headers: {
+        accept: 'application/json',
+        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzNWQ3NWY0YzY5YWE5MDc1NzljMmVmZDg3YWQ0ODlkYiIsInN1YiI6IjY0OTI0ZTc1NzA2ZTU2MDBjNjk5ZGI1ZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.KVU1oDihJi2Z3Qex6pLcOoHCEw_u4sLGnz5PPCgHLG8'
+      }
+    })
+    return result
+  }
+  catch (err) {
+  console.log('fail');
+  }
+} */ 
+
+
 
 
 

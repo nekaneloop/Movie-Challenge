@@ -13,7 +13,9 @@ function FirstData() {
     getFilms().then((response) => {
       setFilms(response.data.results);
     });
+    // mejorar que se coloca en []
   }, []);
+
 
   // renderizado
   return (
@@ -21,25 +23,26 @@ function FirstData() {
       {films.length ? (
         // fragmentacion
         <> 
-          <div className="banner">
-            {films[0].original_title}
+          <div className="tittleBanner">
             <div>
               <img
                 className="posterBanner"
                 src={`${poster + films[0].backdrop_path}`}
               />
+              <h2 className="banner-title"> {films[0].original_title}</h2>
             </div>
           </div>
-          <h2> trending now </h2>
+          <h3> trending now </h3>
 
           {films.slice(1).map((film) => (
             <div key={film.id} className="tittle">
-              {film.original_title}
-              <div>
+              <div className="filmsGrid">
                 <img
                   className="backdrop"
+                  //colocar atributo alt 
                   src={`${poster + film.backdrop_path}`}
                 />
+                <h2> {film.original_title} </h2>
               </div>
             </div>
           ))}
@@ -49,4 +52,4 @@ function FirstData() {
   );
 }
 
-export default FirstData;
+export default FirstData; 
